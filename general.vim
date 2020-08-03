@@ -32,3 +32,5 @@ set mouse=a
 "use system clipboard
 set clipboard=unnamedplus
 
+" instead of default 4000ms (4sec)
+set updatetime=300

@@ -14,6 +14,8 @@ nmap <Down>  <Nop>
 nmap <Left>  <Nop>
 nmap <Right> <Nop>
 
+
+
 " Unbinding fast travel keys
 map $ <Nop>
 map ^ <Nop>
@@ -40,6 +42,8 @@ inoremap JJ <ESC>l
 " Mapping ctrl+backspace to delete word
 imap <M-BS> <C-W>
 map <M-BS> db<del>
+cmap <M-BS> db<del>
+cmap <M-BS> <C-W>
 
 " Mapping <super>yy to 'yank without newline'
 map <leader>yy <C-h>y<C-l>
@@ -167,3 +171,25 @@ function! <SID>SynStack()
 endfun
 
 
+" Coc-vim
+"Coc errors & diagnostic 
+nmap <leader>xn <Plug>(coc-diagnostic-next)
+nmap <leader>xN <Plug>(coc-diagnostic-prev)
+
+" GoTo code navigation.
+nmap <leader>xd <Plug>(coc-definition)
+nmap <leader>xtd <Plug>(coc-type-definition)
+nmap <leader>xi <Plug>(coc-implementation)
+nmap <leader>xx <Plug>(coc-references)
+" Use xh to show documentation in preview window.
+nnoremap <leader>xh :call <SID>show_documentation()<CR>
+" Rename symbol
+nmap <leader>xrn <Plug>(coc-rename)
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction

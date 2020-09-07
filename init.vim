@@ -17,3 +17,6 @@ source $HOME/.config/nvim/colors.vim
 
 
 filetype plugin on
+filetype plugin indent on
+autocmd Filetype * AnyFoldActivate
+set foldlevel=99

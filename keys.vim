@@ -6,6 +6,7 @@
 nnoremap <Space> <Nop>
 let mapleader=" "
 
+
 nmap <Leader>z :set rnu!<CR>
 
 " Unmapping arrows
@@ -13,8 +14,6 @@ nmap <Up>    <Nop>
 nmap <Down>  <Nop>
 nmap <Left>  <Nop>
 nmap <Right> <Nop>
-
-
 
 " Unbinding fast travel keys
 map $ <Nop>
@@ -25,15 +24,15 @@ map } <Nop>
 " Mapping shift+hjkl for fast travel
 noremap K	  5k
 noremap J     5j
-noremap H     B
-noremap L     E
+noremap H     b
+noremap L     e
 noremap <C-x> :bp<Bar>bd #<Cr>
 
 " Mapping ctrl+hjkl for end of line
 noremap <C-l> $
 noremap <C-h> ^
-noremap <C-k> 30k
-noremap <C-j> 30j
+noremap <C-k> 20k
+noremap <C-j> 20j
 
 " Mapping 'jj' for ESC
 inoremap jj <ESC>l
@@ -157,11 +156,9 @@ nmap ga <Plug>(EasyAlign)
 
 " Easymotion plugin
 map <leader>s <leader><leader>s
-map <leader>f <leader><leader>w
-map <leader>d <leader><leader>b
 
 " Show syntax highlighting groups for word under cursor
-nmap <C-a> :call <SID>SynStack()<CR>
+nmap <C-s> :call <SID>SynStack()<CR>
 
 function! <SID>SynStack()
   if !exists("*synstack")
@@ -181,6 +178,8 @@ nmap <leader>xd <Plug>(coc-definition)
 nmap <leader>xtd <Plug>(coc-type-definition)
 nmap <leader>xi <Plug>(coc-implementation)
 nmap <leader>xx <Plug>(coc-references)
+
+
 " Use xh to show documentation in preview window.
 nnoremap <leader>xh :call <SID>show_documentation()<CR>
 " Rename symbol

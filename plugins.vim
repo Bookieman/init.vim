@@ -42,5 +42,6 @@ Plug 'thaerkh/vim-indentguides'
 Plug 'voldikss/vim-floaterm'
 call plug#end()
 
+
 " Check these out when you have time:
 " https://github.com/junegunn/vim-peekaboo

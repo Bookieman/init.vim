@@ -38,11 +38,13 @@ set completeopt+=menuone
 " Coc-VIM
 " TextEdit might fail if hidden is not set.
 set hidden
-let g:coc_diagnostic_disable = 0
+"let g:coc_start_at_startup = v:false
+"let g:coc_diagnostic_disable = 0
 
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
+
 
 " vim-easygrep
 
@@ -68,3 +70,5 @@ endfunction
 
 " vim_current_word
 let g:vim_current_word#highlight_delay = 1000
+
+
